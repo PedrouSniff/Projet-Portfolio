@@ -1,0 +1,68 @@
+@use "../abstract/variable" as v;
+@use "../abstract/mixin";
+
+#footer {
+    background-color: v.$primarycolor;
+    @include mixin.flex($justify: space-between, $align: start,);
+    padding-top: 3rem;
+    padding-bottom: 5rem;
+    
+    img {
+        width: 7rem;
+    }
+
+    div {
+        @include mixin.flex($align: start);
+
+        .contact {
+            margin-right: 2rem;
+        }
+
+        .mail_tel {
+            @include mixin.flex($direction:column, $align: start);
+
+            div {
+                @include mixin.flex($align: center);
+                margin-bottom: 1rem;
+            }
+
+            a {
+                color: white;
+                @include mixin.hover();
+            }
+
+            i {
+                font-size: 30px;
+                margin-right: 1rem;
+            }
+        }
+    }
+
+    .réseaux1 {
+
+        a {
+            color: white;
+            margin-right: 2rem;
+        }
+
+        i {
+            font-size: 30px;
+        }
+
+        &>a:nth-of-type(1) {
+            @include mixin.hover (rgb(252, 68, 99));
+        }
+
+        &>a:nth-of-type(2) {
+            @include mixin.hover (rgb(46, 46, 192));
+        }
+
+        &>a:nth-of-type(3) {
+            @include mixin.hover (rgb(12, 119, 241));
+        }
+
+        &>a:nth-of-type(4) {
+            @include mixin.hover (rgb(218, 50, 8));
+        }
+    }
+}

@@ -1,0 +1,146 @@
+@use "../abstract/variable" as v;
+@use "../abstract/mixin";
+
+@media screen and (max-width: 1270px) {
+    #banner {
+        >div {
+    
+            .img1 {
+                transform: translate(20rem, -12rem);
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 950px) {
+    #banner {
+        display: flex;
+        flex-direction: column;
+        >div {
+
+            .img1 {
+                transform: none;
+                margin-top: 2rem;
+                margin-bottom: 5rem;
+
+                img {
+                    width: auto;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .carousel {
+        width: 60%;
+    }
+
+    #navbar {
+
+        .menu_dropdown {
+
+            i {
+                display: block;
+                margin-right: 3rem;
+                font-size: 40px;
+                color: white;
+            }
+    
+            ul {
+                display: none; 
+
+                li {
+                    border-right: none;
+                }
+            }
+
+            &:hover ul {
+                display: block;
+                position: absolute;
+                top: 1rem;
+                right: 5rem;
+            }
+        }
+    }
+
+    #banner {
+
+        >div {
+            h1 {
+                font-size: 80px;
+            }
+        }
+    }
+
+    #compétences {  
+
+        .compét {
+            width: 80%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .deux_compét {
+            flex-direction: column;
+            width: 100%;
+        }
+    }
+
+    #footer {
+        flex-direction: column;
+        align-items: center;
+        
+        img {
+            width:10rem;
+        }
+
+        .cont_mail {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            p {
+                margin: 0;
+            }
+        }
+    }
+
+    .réseauxetformulaire {
+        flex-direction: column;
+        align-items: center;
+
+        .trait {
+            height: 0rem;
+            width: 0rem;
+            margin-top: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .réseaux {
+            margin: 0rem;
+            width: 350px;
+            height: auto;
+        }
+
+        .formulaire {
+            margin: 0rem;
+            width: 350px;
+            height: auto;
+        }
+    }
+
+    .grids {
+        .grid {
+            grid-template-columns: repeat(1, 1fr);
+            grid-template-rows: repeat(6, 1fr);
+            width: auto;
+            height: auto;
+
+            .grid_img {
+                border: none;
+            } 
+        }
+    }
+}

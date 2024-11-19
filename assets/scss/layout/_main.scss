@@ -1,0 +1,145 @@
+@use "../abstract/variable" as v;
+@use "../abstract/mixin";
+
+// COMPÉTENCES //
+
+#compétences {
+    @include mixin.flex(column);
+    background-color: v.$primarycolor;
+    padding-bottom: 5rem;
+
+    h2 {
+        font-family: "raleway_bold";
+        font-size: 30px;
+    }
+
+    h3 {
+        font-family: "raleway_medium";
+    }
+
+    .deux_compét {
+        @include mixin.flex()
+    }
+
+    .compét {
+        border: solid 1px white;
+        padding: 1rem;
+        margin-top: 3rem;
+        margin-left: 1.5rem;
+        margin-right: 1.5rem;
+
+        ul {
+            color: white;
+            font-family: "roboto_regular";
+
+            li {
+                margin-top: 1rem
+            }
+        }
+
+        .logo {
+            @include mixin.flex();
+
+            i {
+                margin-right: 1rem;
+                font-size: 30px;
+                color: white;
+            }
+        }
+    }
+}
+
+// PROJETS //
+
+#projets {
+    background-image: url("../img/fondProjets.png");
+    background-size: cover;
+    background-position: center;
+    }
+
+.bg_sombre {
+    background-color: rgba(0, 0, 0, 0.5);
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+h2 {
+    font-family: "raleway_bold", sans-serif;
+    font-size: 30px;
+    color: v.$secondarycolor;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+}
+
+
+.decouvrir {
+    display: block;
+    color: v.$secondarycolor;
+    font-size: 20px;
+    font-family: "raleway_medium", sans-serif;
+    text-align: center;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+    transition: color 0.3s ease;
+}
+
+.decouvrir:hover {
+    @include mixin.hover();
+}
+
+
+.carousel {
+    position: relative;
+    width: 100%;
+    max-width: 800px;
+    margin: auto;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+.slides {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.slide {
+    min-width: 100%;
+    display: none;
+}
+
+.slide.active {
+    display: block;
+    animation: fade-in 0.5s ease-in-out;
+}
+
+button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    font-size: 20px;
+    z-index: 1000;
+    border-radius: 50%;
+    transition: background-color 0.3s ease;
+}
+
+button.avant {
+    left: 10px;
+}
+
+button.après {
+    right: 10px;
+}
+
+button:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}

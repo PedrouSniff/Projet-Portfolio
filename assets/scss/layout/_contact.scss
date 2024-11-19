@@ -1,0 +1,92 @@
+@use "../abstract/variable" as v;
+
+// RÉSEAUX ET FORMULAIRE //
+
+.réseauxetformulaire {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: v.$primarycolor;
+    padding-top: 9rem;
+    padding-bottom: 16rem;
+  }
+
+  .réseaux {
+    margin-right: 1rem;
+  }
+
+  .formulaire {
+    margin-left: 1rem;
+  }
+  
+  .réseaux, .formulaire {
+    width: 500px;
+    height: 450px;
+    background: linear-gradient(to bottom, #0066ff, #000);
+    color: white;
+    border-radius: 15px;
+    font-size: 20px;
+    font-family: "roboto_medium";
+    padding: 3rem;
+  }
+
+  .trait {
+    background-color: white;
+    height: 40rem;
+    width: 1px;
+  }
+  
+  .réseaux h2, .formulaire h2 {
+    font-size: 30px;
+    font-family: "raleway_bold";
+    text-align: center;
+    padding-bottom: 2rem;
+  }
+  
+  .social .réseau {
+    display: flex;
+    align-items: center;
+    padding-left: 4rem;
+    margin-bottom: 2rem;
+  }
+  
+  .réseau i {
+      font-size: 30px;
+      margin-right: 2rem;
+ 
+}
+  
+  .numéro {
+    display: flex;
+    align-items: center;
+    opacity: 0.8;
+    font-size: 20px;
+    padding-left: 4rem;
+  }
+
+  .numéro i {
+    font-size: 30px;
+    margin-right: 2rem;
+  }
+  
+  form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  form label {
+    font-size: 20px;
+  }
+
+  form input {
+    padding: 10px;
+    margin-bottom: 1rem;
+
+  }
+  
+  form textarea {
+    border-radius: 5px;
+    padding: 10px;
+    padding-bottom: 5rem;
+  }
+  

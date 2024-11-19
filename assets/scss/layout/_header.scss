@@ -1,0 +1,83 @@
+@use "../abstract/variable" as v;
+@use "../abstract/mixin";
+
+// NAVBAR //
+
+#navbar {
+    @include mixin.flex($justify: space-between);
+    background-color: v.$primarycolor;
+    position: relative;
+
+    img {
+        width: 7rem;
+    }
+
+    i {
+        display: none;
+    }
+
+    ul {
+        display: flex;
+
+        li {
+            border-right: solid 1px ;
+            border-color: white;
+
+            a { 
+                display: block;
+                color: v.$secondarycolor;
+                margin-left: 2rem;
+                margin-right: 2rem;
+                font-size: 20px;
+                font-family: "raleway_bold";
+                @include mixin.hover();
+            }
+        }
+
+        li:last-child{
+            border: none;
+        }
+    }
+}
+
+// BANNER //
+
+#banner {
+    background-image: url("../img/banner.jpg");
+    background-size: cover;
+    background-position: center;
+    @include mixin.flex();
+
+    >div {
+        background-color:rgba(0, 0, 0, 0.6);
+        width: 100%;
+        height: 100%;
+        @include mixin.flex($direction: column,);
+
+        h1 {
+            font-size: 128px;
+            font-family: "raleway_medium";
+            margin-top: 5rem;
+
+            span {
+                display: block;
+                text-align: center;           
+            }
+        }
+
+        .img1 {
+            transform: translate(30rem, -12rem);
+
+            img {
+                width: 120%;
+            }
+        }
+
+        p {
+            width: 30%;
+            background-color: v.$primarycolor;
+            padding: 10px;
+            text-align: center;
+        }
+    }
+}

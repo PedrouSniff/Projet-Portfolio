@@ -1,0 +1,17 @@
+@use "../abstract/variable" as v;
+
+body {
+    background-color: v.$primarycolor;
+}
+
+p {
+    font-family: "roboto_regular";
+    color: white;
+}
+
+h1, h2, h3, h4 {
+    color: v.$secondarycolor
+}
+
+
+
